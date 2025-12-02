@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.listen(PORT, '0.0.0.0', () => console.log(`Server running on ${PORT}`));
-module.exports = app; // サーバーは起動しない
+app.get('/', (req, res) => res.send('Hello CI/CD!'));
+
+module.exports = app;
 
